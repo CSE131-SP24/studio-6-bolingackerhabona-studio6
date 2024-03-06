@@ -12,9 +12,12 @@ public class RecursiveMethods {
 	 *         ...)
 	 */
 	public static double geometricSum(int n) {
-		
-			// FIXME compute the geometric sum for the first n terms recursively
-			return 0;
+		if (n == 1) { // BASE CASE
+			return 1/2;
+		}
+		else { // RECURSIVE
+			return Math.pow(0.5, n) + geometricSum(n-1);
+		}
 		
 	}
 
@@ -27,7 +30,15 @@ public class RecursiveMethods {
 	 * @return greatest common divisor of p and q
 	 */
 	public static int gcd(int p, int q) {
-		
+		if (p % q == 0) {
+			return q;
+		}
+		else if (q % p == 0) 
+		{
+			return p; 
+		}
+		else
+			return 
 			// FIXME compute the gcd of p and q using recursion
 			return 0;
 		
